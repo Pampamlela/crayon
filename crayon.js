@@ -23,4 +23,65 @@ drawMyPen('septembre');
 |__|
 */
 
-drawMyPen(){}
+const calendrierDuCrayon = {
+    septembre: 10,
+    octobre: 9,
+    novembre: 8,
+    decembre: 7,
+    janvier: 6,
+    fevrier: 5,
+    mars: 4,
+    avril: 3,
+    mai: 2,
+    juin: 1,
+};
+
+
+// 1. afficher la point du crayon : 
+//  /\
+// /__\
+
+function afficherPointe(){
+    let premiereLigne = " /\\"
+    console.log(premiereLigne)
+    let deuxiemeLigne = "/__\\"
+    console.log(deuxiemeLigne)
+}
+
+afficherPointe()
+
+// 2. afficher 1 étage du crayon : 
+// ||||
+
+function afficherEtage(){
+    let etage = "||||"
+    console.log(etage)
+}
+
+afficherEtage()
+
+// 3. afficher la fin du crayon qui correspond aussi à 1 étage de gomme:
+// |__|
+
+function afficherBasCrayon(){
+    let basCrayon = "|__|"
+    console.log(basCrayon)
+}
+
+afficherBasCrayon()
+
+// 4. afficher gomme à 2 étages : 
+// |  |
+// |__|
+
+function afficherGomme(){
+    let premiereGomme = "|  |"
+    console.log(premiereGomme)
+    let deuxiemeGomme = "|__|"
+    console.log(deuxiemeGomme)
+}
+
+afficherGomme()
+
+
+//drawMyPen(){}
