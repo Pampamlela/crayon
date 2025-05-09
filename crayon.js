@@ -36,6 +36,7 @@ const calendrierDuCrayon = {
     juin: 1,
 };
 
+console.log(calendrierDuCrayon.septembre)
 
 // 1. afficher la point du crayon : 
 //  /\
@@ -59,6 +60,19 @@ function afficherEtage(){
 }
 
 afficherEtage()
+
+// 2. afficher plusieurs étages :
+
+function afficherPlusieursEtages(mois){
+    let valeur = calendrierDuCrayon[mois];
+    //console.log(valeur);
+    
+    for(let i=0; i<valeur; i++){
+        afficherEtage()
+    }
+}
+
+afficherPlusieursEtages('septembre')
 
 // 3. afficher la fin du crayon qui correspond aussi à 1 étage de gomme:
 // |__|
@@ -84,4 +98,22 @@ function afficherGomme(){
 afficherGomme()
 
 
-//drawMyPen(){}
+function drawMyPen(mois){
+    console.log(mois)
+    afficherPointe()
+    afficherPlusieursEtages(mois)
+    afficherBasCrayon()
+    if(calendrierDuCrayon[mois]>4){
+        afficherGomme()
+    }else{
+        afficherBasCrayon()
+    }
+}
+
+drawMyPen('septembre')
+/drawMyPen('octobre')
+drawMyPen('decembre')
+drawMyPen('fevrier')
+drawMyPen('mars')
+drawMyPen('mai')
+drawMyPen('juin')
